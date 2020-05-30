@@ -1,5 +1,9 @@
 # Coding Style Preset
 
+## General
+
+- [Spatie's General PHP Rules](https://guidelines.spatie.be/code-style/laravel-php#general-php-rules)
+
 ## php-cs-fixer
 
 ### PSR-12
@@ -173,7 +177,3 @@ return PhpCsFixer\Config::create()
     ])
     ->setLineEnding("\n");
 ```
-
-## General
-
-- [Spatie's General PHP Rules](https://guidelines.spatie.be/code-style/laravel-php#general-php-rules)
