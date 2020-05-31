@@ -6,30 +6,30 @@ PHP 7.x introduces new Throwable interface together Error and Exception.
 Throwable
 +-- Error
 |   +-- ArithmeticError
-|       +-- DivisionByZeroError
+|   |   +-- DivisionByZeroError
 |   +-- AssertionError
 |   +-- ParseError
 |   +-- TypeError
 +-- Exception
-|   +-- ClosedGeneratorException
-|   +-- DOMException
-|   +-- ErrorException
-|   +-- IntlException
-|   +-- LogicException
-|       +-- BadFunctionCallException
-|           +-- BadMethodCallException
-|       +-- DomainException
-|       +-- InvalidArgumentException
-|       +-- LengthException
-|       +-- OutOfRangeException
-|   +-- PharException
-|   +-- ReflectionException
-|   +-- RuntimeException
-|       +-- mysqli_sql_exception
-|       +-- OutOfBoundsException
-|       +-- OverflowException
-|       +-- PDOException
-|       +-- RangeException
-|       +-- UnderflowException
-|       +-- UnexpectedValueException
+    +-- ClosedGeneratorException
+    +-- DOMException
+    +-- ErrorException
+    +-- IntlException
+    +-- LogicException
+    |   +-- BadFunctionCallException
+    |   |   +-- BadMethodCallException
+    |   +-- DomainException
+    |   +-- InvalidArgumentException
+    |   +-- LengthException
+    |   +-- OutOfRangeException
+    +-- PharException
+    +-- ReflectionException
+    +-- RuntimeException
+        +-- mysqli_sql_exception
+        +-- OutOfBoundsException
+        +-- OverflowException
+        +-- PDOException
+        +-- RangeException
+        +-- UnderflowException
+        +-- UnexpectedValueException
 ```
