@@ -55,8 +55,6 @@ var_dump(0%0);
 ```php
 <?php
 
-// AssertionError
-
 ini_set('assert.exception', 1);
 assert(2 < 1);
 
