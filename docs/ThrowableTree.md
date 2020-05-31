@@ -52,11 +52,15 @@ intdiv(PHP_INT_MIN, -1);
 ```php
 <?php
 
-var_dump(0%0);
+$a = 3%0;
 
 // output
-// PHP Fatal error:  Uncaught DivisionByZeroError: Modulo by zero in %s line %d
+// PHP Fatal error:  Uncaught DivisionByZeroError: Modulo by zero
 
+$a = intdiv(3, 0); // 3/0 is not fire exception.
+
+// output
+// PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero
 ```
 
 ## AssertionError
@@ -64,7 +68,8 @@ var_dump(0%0);
 ```php
 <?php
 
-ini_set('assert.exception', 1);
+ini_set('assert.exception', 1); //if without this, not exception but error
+
 assert(2 < 1);
 
 // output
