@@ -1,5 +1,16 @@
 # PHP Throwable Tree
 
+- [Introduction](#introduction)
+- [Example & Output](#example--output)
+  - [ArithmeticError](#arithmeticerror)
+  - [DivisionByZeroError](#divisionbyzeroerror)
+  - [AssertionError](#assertionerror)
+  - [ArgumentCountError](#argumentcounterror)
+  - [TypeError](#typeerror)
+- [Runtime Exceptions](#runtime-exceptions)
+
+## Introduction
+
 PHP 7.x introduces new Throwable interface together Error and Exception.
 
 ```bash
@@ -36,7 +47,9 @@ Interface Throwable
         +-- UnexpectedValueException
 ```
 
-## ArithmeticError
+## Example & Output
+
+### ArithmeticError
 
 ```php
 <?php
@@ -47,7 +60,7 @@ intdiv(PHP_INT_MIN, -1);
 // Fatal error: Uncaught ArithmeticError: Division of PHP_INT_MIN by -1 is not an integer
 ```
 
-## DivisionByZeroError
+### DivisionByZeroError
 
 ```php
 <?php
@@ -63,7 +76,7 @@ $a = intdiv(3, 0); // 3/0 is not fire exception.
 // PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero
 ```
 
-## AssertionError
+### AssertionError
 
 ```php
 <?php
@@ -77,7 +90,7 @@ assert(2 < 1);
 
 ```
 
-## ArgumentCountError
+### ArgumentCountError
 
 ```php
 <?php
@@ -92,7 +105,7 @@ count($a, COUNT_RECURSIVE, 'throw error');
 // PHP Fatal error:  Uncaught ArgumentCountError: count() expects at most 2 parameters, 3 given
 ```
 
-## TypeError
+### TypeError
 
 ```php
 <?php
