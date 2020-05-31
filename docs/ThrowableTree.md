@@ -2,14 +2,18 @@
 
 PHP 7.x introduces new Throwable interface together Error and Exception.
 
+PHP 7.3 over:
+
 ```bash
-Throwable
+Throwable (Interface)
 +-- Error
 |   +-- ArithmeticError
 |   |   +-- DivisionByZeroError
 |   +-- AssertionError
-|   +-- ParseError
+|   +-- CompileError
+|       +-- ParseError
 |   +-- TypeError
+|       +-- ArgumentCountError
 +-- Exception
     +-- ClosedGeneratorException
     +-- DOMException
@@ -34,7 +38,34 @@ Throwable
         +-- UnexpectedValueException
 ```
 
-## Example code
+## DivisionByZeroError
+
+```php
+<?php
+
+var_dump(0%0);
+
+// output
+// PHP Fatal error:  Uncaught DivisionByZeroError: Modulo by zero in %s line %d
+
+```
+
+## AssertionError
+
+```php
+<?php
+
+// AssertionError
+
+ini_set('assert.exception', 1);
+assert(2 < 1);
+
+// output
+// PHP Fatal error:  Uncaught AssertionError: assert(2 < 1) in...
+
+```
+
+## Runtime Exceptions
 
 | Name           | Example                                                                                     |
 | :------------- | :------------------------------------------------------------------------------------------ |
