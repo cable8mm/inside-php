@@ -36,6 +36,17 @@ Interface Throwable
         +-- UnexpectedValueException
 ```
 
+## ArithmeticError
+
+```php
+<?php
+
+intdiv(PHP_INT_MIN, -1);
+
+// output
+// Fatal error: Uncaught ArithmeticError: Division of PHP_INT_MIN by -1 is not an integer
+```
+
 ## DivisionByZeroError
 
 ```php
@@ -59,6 +70,34 @@ assert(2 < 1);
 // output
 // PHP Fatal error:  Uncaught AssertionError: assert(2 < 1) in...
 
+```
+
+## ArgumentCountError
+
+```php
+<?php
+
+declare(strict_types=1); //if without this, not exception but error
+
+$a = [1,2=>[3,4]];
+
+count($a, COUNT_RECURSIVE, 'throw error');
+
+// output
+// PHP Fatal error:  Uncaught ArgumentCountError: count() expects at most 2 parameters, 3 given
+```
+
+## TypeError
+
+```php
+<?php
+
+a('throw error');
+
+function a(int $b) {}
+
+// output
+// PHP Fatal error:  Uncaught TypeError: Argument 1 passed to a() must be of the type int, string given
 ```
 
 ## Runtime Exceptions
