@@ -2,15 +2,13 @@
 
 PHP 7.x introduces new Throwable interface together Error and Exception.
 
-PHP 7.3 over:
-
 ```bash
-Throwable (Interface)
+Interface Throwable
 +-- Error
 |   +-- ArithmeticError
 |   |   +-- DivisionByZeroError
 |   +-- AssertionError
-|   +-- CompileError
+|   +-- CompileError (PHP 7.3 over)
 |       +-- ParseError
 |   +-- TypeError
 |       +-- ArgumentCountError
