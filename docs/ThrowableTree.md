@@ -33,3 +33,9 @@ Throwable
         +-- UnderflowException
         +-- UnexpectedValueException
 ```
+
+## Example code
+
+| Name           | Example                                                                                     |
+| :------------- | :------------------------------------------------------------------------------------------ |
+| LogicException | [LogicException.php](../src/ThrowableTree/LogicException.php "View LogicException Example") |
