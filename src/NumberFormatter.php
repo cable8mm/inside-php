@@ -85,9 +85,6 @@ $predefinedConstants = [
 
 echo '| Outout | Predefined Constant | Constant Value(int) |' . PHP_EOL . '| :--- | :---| :---: |' . PHP_EOL;
 
-$numberFormatterClass = new ReflectionClass('NumberFormatter');
-$constants = $numberFormatterClass->getConstants();
-
 $i = 0;
 
 foreach ($predefinedConstants as $k => $predefinedConstant) {
